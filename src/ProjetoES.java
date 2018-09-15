@@ -8,7 +8,7 @@ import javax.swing.text.*;
 
 public class ProjetoES extends JFrame {
 
-    JButton botaoProduto, botaoUsuario, botaoCliente, botaoFornecedor, botao5;
+    JButton botaoProduto, botaoUsuario, botaoCliente, botaoFornecedor;
     Produtos Produto;
     Usuarios Usuario;
     Clientes Cliente;
