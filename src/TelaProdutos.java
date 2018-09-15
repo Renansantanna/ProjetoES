@@ -1,20 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 import java.text.ParseException;
 import java.util.Vector;
-/**
- *
- * @author Dell
- */
+
 public class TelaProdutos extends JFrame{
-    JButton botao, botao2, botao3, botao4, botao5, botao6, botao7;
+    JButton btnConsultar, btnExcluir, btnLimpar, btnIncluir, btnAlterar, btnRelatorioGeral, btnRelatorioComParametros;
     JLabel titulo, descri, lnome, quant, UnitVend, UnitComp;
     JTextField descricao, tnome, quantidade, UnitVenda, UnitCompra;
     RelatorioG relatorioG;
@@ -39,13 +31,13 @@ public class TelaProdutos extends JFrame{
         UnitVenda = new JTextField(15);
         UnitCompra = new JTextField(15);
 
-        botao = new JButton("Consultar Registro");
-        botao2 = new JButton("Excluir Registro");
-        botao3 = new JButton("Limpar Caixas");
-        botao4 = new JButton("Incluir");
-        botao5 = new JButton("Alterar Registro");
-        botao6 = new JButton("Relatorio Geral");
-        botao7 = new JButton("Relatorio com Parâmetro");
+        btnConsultar = new JButton("Consultar Registro");
+        btnExcluir = new JButton("Excluir Registro");
+        btnLimpar = new JButton("Limpar Caixas");
+        btnIncluir = new JButton("Incluir");
+        btnAlterar = new JButton("Alterar Registro");
+        btnRelatorioGeral = new JButton("Relatorio Geral");
+        btnRelatorioComParametros = new JButton("Relatorio com Parâmetro");
 
         descri.setBounds(20, 70, 300, 20);
         lnome.setBounds(60, 250, 300, 20);
@@ -60,13 +52,13 @@ public class TelaProdutos extends JFrame{
         UnitVenda.setBounds(100, 150, 100, 20);
         UnitCompra.setBounds(100, 190, 100, 20);
 
-        botao.setBounds(350, 260, 150, 20);
-        botao2.setBounds(350, 290, 150, 20);
-        botao3.setBounds(350, 170, 150, 20);
-        botao4.setBounds(350, 70, 150, 20);
-        botao5.setBounds(350, 110, 150, 20);
-        botao6.setBounds(60, 330, 150, 20);
-        botao7.setBounds(250, 330, 200, 20);
+        btnConsultar.setBounds(350, 260, 150, 20);
+        btnExcluir.setBounds(350, 290, 150, 20);
+        btnLimpar.setBounds(350, 170, 150, 20);
+        btnIncluir.setBounds(350, 70, 150, 20);
+        btnAlterar.setBounds(350, 110, 150, 20);
+        btnRelatorioGeral.setBounds(60, 330, 150, 20);
+        btnRelatorioComParametros.setBounds(250, 330, 200, 20);
 
         titulo.setBounds(250, 10, 250, 20);
 
@@ -80,17 +72,17 @@ public class TelaProdutos extends JFrame{
         tela1.add(quantidade);
         tela1.add(UnitVenda);
         tela1.add(UnitCompra);
-        tela1.add(botao);
-        tela1.add(botao2);
-        tela1.add(botao3);
-        tela1.add(botao4);
-        tela1.add(botao5);
-        tela1.add(botao6);
-        tela1.add(botao7);
+        tela1.add(btnConsultar);
+        tela1.add(btnExcluir);
+        tela1.add(btnLimpar);
+        tela1.add(btnIncluir);
+        tela1.add(btnAlterar);
+        tela1.add(btnRelatorioGeral);
+        tela1.add(btnRelatorioComParametros);
 
         tela1.add(titulo);
 
-        botao.addActionListener(new ActionListener() {
+        btnConsultar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
                 try {
@@ -119,7 +111,7 @@ public class TelaProdutos extends JFrame{
             }
         });
 
-        botao2.addActionListener(new ActionListener() {
+        btnExcluir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
                 try {
@@ -151,7 +143,7 @@ public class TelaProdutos extends JFrame{
             }
         });
 
-        botao3.addActionListener(new ActionListener() {
+        btnLimpar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
                 descricao.setText("");
@@ -163,7 +155,7 @@ public class TelaProdutos extends JFrame{
             }
         });
 
-        botao4.addActionListener(new ActionListener() {
+        btnIncluir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
                 try {
@@ -195,7 +187,7 @@ public class TelaProdutos extends JFrame{
             }
         });
 
-        botao5.addActionListener(new ActionListener() {
+        btnAlterar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
                 try {
@@ -221,7 +213,7 @@ public class TelaProdutos extends JFrame{
             }
         });
 
-        botao6.addActionListener(new ActionListener() {
+        btnRelatorioGeral.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 relatorioG = new RelatorioG();
                 relatorioG.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -229,7 +221,7 @@ public class TelaProdutos extends JFrame{
 
             }
         });
-        botao7.addActionListener(new ActionListener() {
+        btnRelatorioComParametros.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 relatorioCP = new RelatorioCP();
                 relatorioCP.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
