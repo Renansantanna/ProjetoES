@@ -26,7 +26,7 @@ public class TelaUsuarios extends JFrame{
   
 
         JButton btnConsultar, btnExcluir, btnLimpar, btnIncluir, btnAlterar, botao6, botao7;
-        JLabel titulo, descri, lnome, quant, UnitVend;
+        JLabel titulo, descri, lnome, Login, Senha;
         JTextField descricao, tnome, quantidade;
         JPasswordField UnitVenda;
         RelatorioG2 relatorioG2;
@@ -40,8 +40,8 @@ public class TelaUsuarios extends JFrame{
             titulo.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
             descri = new JLabel("Nome: ");
             lnome = new JLabel("Informe o Nome a ser pesquisado: ");
-            quant = new JLabel("Login: ");
-            UnitVend = new JLabel("Senha:");
+            Login = new JLabel("Login: ");
+            Senha = new JLabel("Senha:");
 
             descricao = new JTextField(15);
             tnome = new JTextField(50);
@@ -59,8 +59,8 @@ public class TelaUsuarios extends JFrame{
 
             descri.setBounds(20, 70, 300, 20);
             lnome.setBounds(60, 250, 300, 20);
-            quant.setBounds(20, 110, 80, 20);
-            UnitVend.setBounds(20, 150, 100, 20);
+            Login.setBounds(20, 110, 80, 20);
+            Senha.setBounds(20, 150, 100, 20);
 
             descricao.setBounds(100, 70, 100, 20);
             tnome.setBounds(60, 280, 280, 20);
@@ -81,8 +81,8 @@ public class TelaUsuarios extends JFrame{
             tela1.add(descri);
             tela1.add(descricao);
             tela1.add(lnome);
-            tela1.add(quant);
-            tela1.add(UnitVend);
+            tela1.add(Login);
+            tela1.add(Senha);
 
             tela1.add(tnome);
             tela1.add(quantidade);
