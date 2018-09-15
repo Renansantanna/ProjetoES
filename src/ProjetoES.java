@@ -8,12 +8,12 @@ import javax.swing.text.*;
 
 public class ProjetoES extends JFrame {
 
-<<<<<<< HEAD
+
     JButton botaoProduto, botaoUsuario, botaoCliente, botaoFornecedor;
-    Produtos Produto;
-    Usuarios Usuario;
-    Clientes Cliente;
-    Fornecedores Fornecedor;
+    TelaProdutos Produto;
+    TelaUsuarios Usuario;
+    
+    
 
     public ProjetoES() {
         super("Menu principal");
@@ -37,7 +37,7 @@ public class ProjetoES extends JFrame {
 
         botaoProduto.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Produto = new Produtos();
+                Produto = new TelaProdutos();
                 Produto.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 Produto.setVisible(true);
 
@@ -46,30 +46,14 @@ public class ProjetoES extends JFrame {
 
         botaoUsuario.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Usuario = new Usuarios();
+                Usuario = new TelaUsuarios();
                 Usuario.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 Usuario.setVisible(true);
 
             }
         });
 
-        botaoCliente.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                Cliente = new Clientes();
-                Cliente.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                Cliente.setVisible(true);
-
-            }
-        });
-
-        botaoFornecedor.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-
-                Fornecedor = new Fornecedores();
-                Fornecedor.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                Fornecedor.setVisible(true);
-            }
-        });
+        
 
         setSize(400, 130);
         setVisible(true);
@@ -77,9 +61,7 @@ public class ProjetoES extends JFrame {
 
     }
 
-=======
- 
->>>>>>> 403fa52cd62432643dd05bd55ca4e3034e2aa458
+
     public static void main(String[] args) {
        MenuPrincipal  app = new MenuPrincipal();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -87,13 +69,7 @@ public class ProjetoES extends JFrame {
 }
 
     
-////////////////////////////////////////////////
-//COMEÇA OS USUARIOS AQUI
-///////////////////////////////////////////////   
-   
-////////////////////////////////////////////////
-//TERMINA OS USUARIOS AQUI
-///////////////////////////////////////////////   
+
 
 
 
