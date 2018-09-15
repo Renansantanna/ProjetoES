@@ -8,7 +8,7 @@ import javax.swing.text.*;
 
 public class ProjetoES extends JFrame {
 
-    JButton botao, botao2, botao3, botao4, botao5;
+    JButton botaoProduto, botaoUsuario, botaoCliente, botaoFornecedor, botao5;
     Produtos Produto;
     Usuarios Usuario;
     Clientes Cliente;
@@ -19,22 +19,22 @@ public class ProjetoES extends JFrame {
         Container tela = getContentPane();
         tela.setLayout(null);
 
-        botao = new JButton("Produto");
-        botao2 = new JButton("Usuário");
-        botao3 = new JButton("Cliente");
-        botao4 = new JButton("Fornecedor");
+        botaoProduto = new JButton("Produto");
+        botaoUsuario = new JButton("Usuário");
+        botaoCliente = new JButton("Cliente");
+        botaoFornecedor = new JButton("Fornecedor");
 
-        botao.setBounds(20, 20, 150, 20);
-        botao2.setBounds(220, 20, 150, 20);
-        botao3.setBounds(20, 50, 150, 20);
-        botao4.setBounds(220, 50, 150, 20);
+        botaoProduto.setBounds(20, 20, 150, 20);
+        botaoUsuario .setBounds(220, 20, 150, 20);
+        botaoCliente.setBounds(20, 50, 150, 20);
+        botaoFornecedor.setBounds(220, 50, 150, 20);
 
-        tela.add(botao);
-        tela.add(botao2);
-        tela.add(botao3);
-        tela.add(botao4);
+        tela.add(botaoProduto);
+        tela.add(botaoUsuario);
+        tela.add(botaoCliente);
+        tela.add(botaoFornecedor);
 
-        botao.addActionListener(new ActionListener() {
+        botaoProduto.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Produto = new Produtos();
                 Produto.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -43,7 +43,7 @@ public class ProjetoES extends JFrame {
             }
         });
 
-        botao2.addActionListener(new ActionListener() {
+        botaoUsuario.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Usuario = new Usuarios();
                 Usuario.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -52,7 +52,7 @@ public class ProjetoES extends JFrame {
             }
         });
 
-        botao3.addActionListener(new ActionListener() {
+        botaoCliente.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Cliente = new Clientes();
                 Cliente.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -61,7 +61,7 @@ public class ProjetoES extends JFrame {
             }
         });
 
-        botao4.addActionListener(new ActionListener() {
+        botaoFornecedor.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
                 Fornecedor = new Fornecedores();
