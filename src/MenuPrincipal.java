@@ -19,6 +19,7 @@ public class MenuPrincipal extends JFrame{
     TelaProdutos Produto;
     TelaUsuarios Usuario;
     
+    
 
     public MenuPrincipal(){
         super("Menu principal");

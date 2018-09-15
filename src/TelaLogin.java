@@ -30,7 +30,10 @@ public class TelaLogin extends JFrame {
 
             txtLogin = new JTextField(15);
             btnLogar = new JButton("Incluir");
-          
+            
+            txtSenha = new JPasswordField(15);
+           txtSenha.setBounds(100, 150, 100, 20);
+           
             lblLogin.setBounds(20, 110, 80, 20);
             lblSenha.setBounds(20, 150, 100, 20);
 
@@ -42,6 +45,8 @@ public class TelaLogin extends JFrame {
             tela1.add(lblLogin);
             tela1.add(lblSenha);
             tela1.add(txtLogin);
+            tela1.add(txtSenha);
+            tela1.add(btnLogar);
             
              btnLogar.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
@@ -56,9 +61,9 @@ public class TelaLogin extends JFrame {
                         con = DriverManager.getConnection(url, userName, password);
 
                         Statement st = con.createStatement();
-                        ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE nome LIKE'" + txtLogin.getText() + "' AND senha Like '"+txtSenha+"'");
+                        ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE login LIKE'" + txtLogin.getText() + "' AND senha Like '"+txtSenha+"'");
                         rs.next();
-                        System.out.println(rs.getFetchSize());
+                      //  System.out.println(rs.getFetchSize());
                        // for(int count=0;count<rs.getFetchSize();count++)
                         st.close();
                         con.close();
@@ -68,7 +73,9 @@ public class TelaLogin extends JFrame {
                 }
             });
          
-  
+            setSize(600, 400);
+            setVisible(true);
+            setLocationRelativeTo(null);
     }
     
 }
