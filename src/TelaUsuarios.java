@@ -27,8 +27,8 @@ public class TelaUsuarios extends JFrame{
 
         JButton btnConsultar, btnExcluir, btnLimpar, btnIncluir, btnAlterar, botao6, botao7;
         JLabel titulo, descri, lnome, Login, Senha;
-        JTextField descricao, tnome, quantidade;
-        JPasswordField UnitVenda;
+        JTextField descricao, tnome, txtLogin;
+        JPasswordField txtSenha;
         RelatorioG2 relatorioG2;
         RelatorioCP2 relatorioCP2;
 
@@ -46,8 +46,8 @@ public class TelaUsuarios extends JFrame{
             descricao = new JTextField(15);
             tnome = new JTextField(50);
 
-            quantidade = new JTextField(15);
-            UnitVenda = new JPasswordField(15);
+            txtLogin = new JTextField(15);
+            txtSenha = new JPasswordField(15);
 
             btnConsultar = new JButton("Consultar Registro");
             btnExcluir = new JButton("Excluir Registro");
@@ -65,8 +65,8 @@ public class TelaUsuarios extends JFrame{
             descricao.setBounds(100, 70, 100, 20);
             tnome.setBounds(60, 280, 280, 20);
 
-            quantidade.setBounds(100, 110, 100, 20);
-            UnitVenda.setBounds(100, 150, 100, 20);
+            txtLogin.setBounds(100, 110, 100, 20);
+            txtSenha.setBounds(100, 150, 100, 20);
 
             btnConsultar.setBounds(350, 260, 150, 20);
             btnExcluir.setBounds(350, 290, 150, 20);
@@ -85,8 +85,8 @@ public class TelaUsuarios extends JFrame{
             tela1.add(Senha);
 
             tela1.add(tnome);
-            tela1.add(quantidade);
-            tela1.add(UnitVenda);
+            tela1.add(txtLogin);
+            tela1.add(txtSenha);
 
             tela1.add(btnConsultar);
             tela1.add(btnExcluir);
@@ -115,8 +115,8 @@ public class TelaUsuarios extends JFrame{
                         rs.next();
 
                         descricao.setText(rs.getString("Nome"));
-                        quantidade.setText(rs.getString("Login"));
-                        UnitVenda.setText(rs.getString("Senha"));
+                        txtLogin.setText(rs.getString("Login"));
+                        txtSenha.setText(rs.getString("Senha"));
 
                         st.close();
                         con.close();
@@ -143,8 +143,8 @@ public class TelaUsuarios extends JFrame{
 
                         JOptionPane.showMessageDialog(null, "Registro excluido com sucesso! ", "Mensagem do Progama", JOptionPane.ERROR_MESSAGE);
                         descricao.setText("");
-                        quantidade.setText("");
-                        UnitVenda.setText("");
+                        txtLogin.setText("");
+                        txtSenha.setText("");
 
                         tnome.setText("");
 
@@ -163,9 +163,9 @@ public class TelaUsuarios extends JFrame{
 
                     descricao.setText("");
                     tnome.setText("");
-                    quantidade.setText("");
+                    txtLogin.setText("");
 
-                    UnitVenda.setText("");
+                    txtSenha.setText("");
 
                 }
             });
@@ -184,10 +184,10 @@ public class TelaUsuarios extends JFrame{
 
                         Statement st = con.createStatement();
 
-                        st.executeUpdate("INSERT INTO usuario (Nome,Login,Senha) VALUES ('" + descricao.getText() + "','" + quantidade.getText() + "','" + UnitVenda.getText() + "')");
+                        st.executeUpdate("INSERT INTO usuario (Nome,Login,Senha) VALUES ('" + descricao.getText() + "','" + txtLogin.getText() + "','" + txtSenha.getText() + "')");
                         descricao.setText("");
-                        quantidade.setText("");
-                        UnitVenda.setText("");
+                        txtLogin.setText("");
+                        txtSenha.setText("");
 
                         tnome.requestFocus();
 
@@ -214,7 +214,7 @@ public class TelaUsuarios extends JFrame{
                         con = DriverManager.getConnection(url, userName, password);
 
                         Statement st = con.createStatement();
-                        st.executeUpdate("UPDATE usuario SET login ='" + quantidade.getText() + "',senha='" + UnitVenda.getText() + "' WHERE nome LIKE'" + descricao.getText() + "'");
+                        st.executeUpdate("UPDATE usuario SET login ='" + txtLogin.getText() + "',senha='" + txtSenha.getText() + "' WHERE nome LIKE'" + descricao.getText() + "'");
 
                         JOptionPane.showMessageDialog(null, "Registro Alterado com sucesso! ", "Mensagem do Progama", JOptionPane.INFORMATION_MESSAGE);
                         descricao.requestFocus();

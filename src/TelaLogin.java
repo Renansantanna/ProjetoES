@@ -63,7 +63,7 @@ public class TelaLogin extends JFrame {
                         Statement st = con.createStatement();
                         ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE login LIKE'" + txtLogin.getText() + "' AND senha Like '"+txtSenha+"'");
                         rs.next();
-                      //  System.out.println(rs.getFetchSize());
+                       //System.out.println(rs.getFetchSize());
                        // for(int count=0;count<rs.getFetchSize();count++)
                         st.close();
                         con.close();
