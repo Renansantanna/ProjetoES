@@ -21,11 +21,12 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
+
 public class TelaUsuarios extends JFrame{
   
 
-        JButton btnConsultar, btnExcluir, btnLimpar, btnIncluir, btnAlterar, btnRelatorioGeral, btnRelatorioComParametros;
-        JLabel titulo, descri, lnome, Login, Senha;
+        JButton btnConsultar, btnExcluir, btnLimpar, btnIncluir, btnAlterar, botao6, botao7;
+        JLabel titulo, descri, lnome, quant, UnitVend;
         JTextField descricao, tnome, quantidade;
         JPasswordField UnitVenda;
         RelatorioG2 relatorioG2;
@@ -39,8 +40,8 @@ public class TelaUsuarios extends JFrame{
             titulo.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
             descri = new JLabel("Nome: ");
             lnome = new JLabel("Informe o Nome a ser pesquisado: ");
-            Login = new JLabel("Login: ");
-            Senha = new JLabel("Senha: ");
+            quant = new JLabel("Login: ");
+            UnitVend = new JLabel("Senha:");
 
             descricao = new JTextField(15);
             tnome = new JTextField(50);
@@ -53,13 +54,13 @@ public class TelaUsuarios extends JFrame{
             btnLimpar = new JButton("Limpar Caixas");
             btnIncluir = new JButton("Incluir");
             btnAlterar = new JButton("Alterar Registro");
-            btnRelatorioGeral = new JButton("Relatorio Geral");
-            btnRelatorioComParametros = new JButton("Relatorio com Parâmetro");
+            botao6 = new JButton("Relatorio Geral");
+            botao7 = new JButton("Relatorio com Parâmetro");
 
             descri.setBounds(20, 70, 300, 20);
             lnome.setBounds(60, 250, 300, 20);
-            Login.setBounds(20, 110, 80, 20);
-            Senha.setBounds(20, 150, 100, 20);
+            quant.setBounds(20, 110, 80, 20);
+            UnitVend.setBounds(20, 150, 100, 20);
 
             descricao.setBounds(100, 70, 100, 20);
             tnome.setBounds(60, 280, 280, 20);
@@ -72,16 +73,16 @@ public class TelaUsuarios extends JFrame{
             btnLimpar.setBounds(350, 170, 150, 20);
             btnIncluir.setBounds(350, 70, 150, 20);
             btnAlterar.setBounds(350, 110, 150, 20);
-            btnRelatorioGeral.setBounds(60, 330, 150, 20);
-            btnRelatorioComParametros.setBounds(250, 330, 200, 20);
+            botao6.setBounds(60, 330, 150, 20);
+            botao7.setBounds(250, 330, 200, 20);
 
             titulo.setBounds(250, 10, 250, 20);
 
             tela1.add(descri);
             tela1.add(descricao);
             tela1.add(lnome);
-            tela1.add(Login);
-            tela1.add(Senha);
+            tela1.add(quant);
+            tela1.add(UnitVend);
 
             tela1.add(tnome);
             tela1.add(quantidade);
@@ -92,8 +93,8 @@ public class TelaUsuarios extends JFrame{
             tela1.add(btnLimpar);
             tela1.add(btnIncluir);
             tela1.add(btnAlterar);
-            tela1.add(btnRelatorioGeral);
-            tela1.add(btnRelatorioComParametros);
+            tela1.add(botao6);
+            tela1.add(botao7);
 
             tela1.add(titulo);
 
@@ -226,7 +227,7 @@ public class TelaUsuarios extends JFrame{
                 }
             });
 
-            btnRelatorioGeral.addActionListener(new ActionListener() {
+            botao6.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     relatorioG2 = new RelatorioG2();
                     relatorioG2.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -234,7 +235,7 @@ public class TelaUsuarios extends JFrame{
 
                 }
             });
-            btnRelatorioComParametros.addActionListener(new ActionListener() {
+            botao7.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     relatorioCP2 = new RelatorioCP2();
                     relatorioCP2.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
