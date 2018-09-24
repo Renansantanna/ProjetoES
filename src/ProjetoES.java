@@ -1,3 +1,6 @@
+import view.jframe.MenuPrincipal;
+import view.jframe.TelaLogin;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -11,8 +14,7 @@ public class ProjetoES extends JFrame {
 
 
     public static void main(String[] args) {
-       MenuPrincipal  app = new MenuPrincipal();
-        app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+         new TelaLogin().execute();
     }
 }
 

@@ -1,3 +1,5 @@
+package view.jframe;
+
 
 import java.awt.BorderLayout;
 import java.awt.Container;
